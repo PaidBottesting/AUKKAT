@@ -659,7 +659,7 @@ def handle_attack(message):
                                        args=(sent_message.message_id, message.chat.id, time_duration))
     countdown_thread.start()
 
-    full_command = f"./Rohan {target} {port} {time_duration} 512 1200"
+    full_command = f"./Rohan {target} {port} {time_duration} 512 800"
     try:
         attack_process = subprocess.Popen(full_command, shell=True, preexec_fn=os.setsid)
         active_attacks[group_id] = attack_process
